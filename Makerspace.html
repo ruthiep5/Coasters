@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makerpsace Business Register</title>
+</head>
+<body>
+<style>
+    img {
+        width: 150px;
+    }
+
+</style>
+    
+
+    <h1>Coasters</h1>
+    <br>
+
+    <input type="text" id="name" placeholder="name">
+
+    <br><br><input type="text" id="email" placeholder="school email">
+    <br>
+    <h2>Number of Coasters:</h2>
+
+    <select name="number" id="amount">
+        <option value="2">2</option>
+        <option value="4">4</option>
+        <option value="6">6</option>
+        <option value="8">8</option>
+        <option value="10">10</option>
+        <option value="12">12</option>
+    </select>
+    
+    <br><br>
+    <img src="coaster1.JPG" alt="coaster 1">
+    <img src="coaster2.JPG" alt="coaster 2">
+    <img src="coaster3.JPG" alt="coaster 3">
+    <br><br><input type="button" id="button" value="Submit">
+
+</body>
+<script>
+    submitBut = document.getElementById("button")
+    submitBut.addEventListener("click", recordOrder)
+
+    function recordOrder(){
+        //collect info from webpage
+        info = [];
+        info["name"] = document.getElementById('name').value;
+        console.log(info)
+    }
+
+</script>
+</html>
