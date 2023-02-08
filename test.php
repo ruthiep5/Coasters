@@ -7,8 +7,8 @@ echo "and you too coen!<br>";
 print_r($_GET);
 echo "Heloo " . $_GET["name"];
 
-foreach ($_GET as $id){
-    echo $id . "==>" . $_GET[$id] . "<br>";
+foreach ($_GET as $id => $val){
+    echo $id . "==>" . $val . "<br>";
 }
 
 $f=fopen("test.json", "a");
