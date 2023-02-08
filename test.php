@@ -4,5 +4,5 @@ echo "Hi <b>Brooke</b>, why are you late?";
 echo "and you too coen!";
 
 echo $_GET
-print_r($variable, $rreturn)
+print_r($_GET)
 ?>
