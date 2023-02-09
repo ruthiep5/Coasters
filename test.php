@@ -14,6 +14,6 @@ fwrite($f, "this is a file.");
 fclose($f);
 echo "saved";
 
-echo 'type="button" value="hello"';
+echo '<input type="button" value="hello">';
 
 ?>
