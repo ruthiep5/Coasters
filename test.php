@@ -3,7 +3,7 @@
 echo "Hi <b>Brooke</b>, why are you late? ";
 echo "and you too coen!<br>";
 print_r($_GET) . "<br>";
-echo "Hello" . $_GET["name"] . "<p>";
+echo "Hello" . "<br>" . $_GET["name"] . "<p>";
 
 foreach ($_GET as $id => $val){
     echo $id . "==>" . $val . "<br>";
