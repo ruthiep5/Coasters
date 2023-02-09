@@ -12,7 +12,7 @@ foreach ($_GET as $id => $val){
 $f = fopen("test.json", "a");
 fwrite($f, "this is a file.");
 fclose($f);
-echo "saved";
+echo "saved" . "<br>";
 
 echo '<input type="button" value="hello">';
 
