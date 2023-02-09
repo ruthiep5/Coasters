@@ -10,7 +10,9 @@ foreach ($_GET as $id => $val){
 }
 
 $f = fopen("test.json", "a");
-fwrite($f, "this is a file.");
+fwrite($f, "this is a file. \n");
+fwrite($f, json_encode($_GET) . "\n");
+
 fclose($f);
 echo "saved" . "<br>";
 
