@@ -17,7 +17,7 @@
 </style>
     
 
-    <h1>Coasterss</h1>
+    <h1>Coasters</h1>
     <br>
 
     <input type="text" id="name" placeholder="name">
@@ -29,67 +29,67 @@
     <div class="row">
         <div class="column">
             <img src="coaster1.JPG" alt="1"> 
-            <input type="number" id="#12">
+            <input type="number" id="12" class="coaster">
         </div>
        
         <div class="column">
             <img src="coaster2.JPG" alt="coaster 2">
-            <input type="number" id="#18">
+            <input type="number" id="18" class="coaster">
         </div>
             
         <div class="column">
             <img src="coaster3.JPG" alt="coaster 3"> 
-            <input type="number" id="?">
+            <input type="number" id="sin_flower" class="coaster">
         </div>  
 
         <div class="column">
             <img src="coaster4.JPG" alt="coaster 4"> 
-            <input type="number" id="7">
+            <input type="number" id="7" class="coaster">
         </div>
 
         <div class="column">
             <img src="coaster5.JPG" alt="coaster 5"> 
-            <input type="number" id="16">
+            <input type="number" id="16" class="coaster">
         </div>
 
         <div class="column">
             <img src="coaster6.JPG" alt="coaster 6"> 
-            <input type="number" id="29">
+            <input type="number" id="29" class="coaster">
         </div>
        
         <div class="column">
             <img src="coaster7.JPG" alt="coaster 7"> 
-            <input type="number" id="22">
+            <input type="number" id="22" class="coaster">
         </div>  
         
         <div class="column">
             <img src="coaster8.JPG" alt="coaster 8"> 
-            <input type="number" id="6">
+            <input type="number" id="6" class="coaster">
         </div>  
 
         <div class="column">
             <img src="coaster9.JPG" alt="coaster 9"> 
-            <input type="number" id="9">
+            <input type="number" id="9" class="coaster">
         </div>
 
         <div class="column">
             <img src="coaster10.JPG" alt="coaster 10"> 
-            <input type="number" id="15">
+            <input type="number" id="15" class="coaster"> 
         </div>    
 
         <div class="column">
             <img src="coaster11.JPG" alt="coaster 11">
-            <input type="number" id="14">
+            <input type="number" id="14" class="coaster">
         </div>
 
         <div class="column">
             <img src="coaster12.JPG" alt="coaster 12">
-            <input type="number" id="31">
+            <input type="number" id="31" class="coaster">
         </div>
 
         <div class="column">
             <img src="coaster13.JPG" alt="coaster 13">
-            <input type="number" id="24">
+            <input type="number" id="24" class="coaster">
         </div>
     </div>
 
@@ -107,9 +107,11 @@
 
     function recordOrder(){
         //collect info from webpage
-        info = [];
-        info["name"] = document.getElementById('name').value;
-        console.log(info)
+       for(i = 0; i < class="coaster"; i++) {
+        console.log(classCoaster[i].name)
+       }
+    
+
     }
 
 </script>
