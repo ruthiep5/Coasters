@@ -107,8 +107,10 @@
 
     function recordOrder(){
         //collect info from webpage
-       for(i = 0; i < class="coaster"; i++) {
-        console.log(classCoaster[i].name)
+       const allCoasterByClass = document.getElementByClassName('coasters');
+       let result = "document.getElementsByClassName('coasters')";
+       for (let i = 0; i , allCoasterByClass.length; i++) {
+        result += `\n ${allcoasterbyClass[i].textContent}` ;
        }
     
 
