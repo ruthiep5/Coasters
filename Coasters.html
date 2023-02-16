@@ -117,12 +117,12 @@
         };
         name = document.getElementsById("name").value;
         console.log(name);
-        params = `?name=${username}`;
+        params = `?name=${name}`;
         console.log(params);
         url += params;
         email = document.getElementsById("email").value;
         console.log(email);
-        
+
         xRequest.open("GET", url, true);
         xRequest.send();   
     }
