@@ -95,7 +95,7 @@
     </div>
 
 
-    
+    <div id = "Coas">coaster pic</div>
     <br><br><input type="button" id="button" value="Submit">
 
     
@@ -107,6 +107,13 @@
     submitBut.addEventListener("click", recordOrder)
 
     function recordOrder(){
+        url =''
+        xRequest = new XMLHttpRequest();
+        xRequest.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("Coas").innerHTML = this.responseText;
+            }
+        }
         console.log("hello")
         //collect info from webpage
        const allCoasterByClass = document.getElementsByClassName('coasters');
