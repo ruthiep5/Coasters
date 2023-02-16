@@ -107,21 +107,15 @@
     submitBut.addEventListener("click", recordOrder)
 
     function recordOrder(){
-        url =''
+        url ='basic.php'
         xRequest = new XMLHttpRequest();
         xRequest.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 document.getElementById("Coas").innerHTML = this.responseText;
             }
-        }
-        console.log("hello")
-        //collect info from webpage
-       const allCoasterByClass = document.getElementsByClassName('coasters');
-       console.log(allCoasterByClass)
-       for(let i=0;i<allCoasterByClass.length;i++){
-            console.log(allCoasterByClass[i].innerText)
-        }
-
+        };
+        xRequest.open("GET", url, true);
+        xRequest.send();   
     }
 
 </script>
