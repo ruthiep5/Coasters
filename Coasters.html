@@ -115,12 +115,12 @@
                 document.getElementById("Coas").innerHTML = this.responseText;
             }
         };
-        name = document.getElementsById("name").value;
+        name = document.getElementById("name").value;
         console.log(name);
         params = `?name=${name}`;
         console.log(params);
         url += params;
-        email = document.getElementsById("email").value;
+        email = document.getElementById("email").value;
         console.log(email);
 
         xRequest.open("GET", url, true);
