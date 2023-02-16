@@ -21,8 +21,9 @@
  
     <h2>Enter:</h2>
 
-    <input type="text" id="name" placeholder="name">
-   
+    <input type="text" id="name" placeholder="First Name">
+    <input type="text" id="name" placeholder="Last Name">
+
     <br><br><input type="text" id="email" placeholder="school email">
     <br><br><br>
     <h2>Select which coaster(s), and how many you would like of each:</h2>
@@ -114,6 +115,14 @@
                 document.getElementById("Coas").innerHTML = this.responseText;
             }
         };
+        name = document.getElementsById("name").value;
+        console.log(name);
+        params = `?name=${username}`;
+        console.log(params);
+        url += params;
+        email = document.getElementsById("email").value;
+        console.log(email);
+        
         xRequest.open("GET", url, true);
         xRequest.send();   
     }
