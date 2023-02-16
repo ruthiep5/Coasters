@@ -21,8 +21,8 @@
  
     <h2>Enter:</h2>
 
-    <input type="text" id="name" placeholder="First Name">
-    <input type="text" id="name" placeholder="Last Name">
+    <input type="text" id="firstName" placeholder="First Name">
+    <input type="text" id="lastName" placeholder="Last Name">
 
     <br><br><input type="text" id="email" placeholder="school email">
     <br><br><br>
@@ -115,14 +115,25 @@
                 document.getElementById("Coas").innerHTML = this.responseText;
             }
         };
-        name = document.getElementById("name").value;
+        name = document.getElementById("firstName").value;
         console.log(name);
-        params = `?name=${name}`;
+        params = `?firstName=${name}`;
         console.log(params);
         url += params;
+
+        name = document.getElementById("lastName").value;
+        console.log(name);
+        params = `&lastName=${name}`;
+        console.log(params);
+        url += params;
+
         email = document.getElementById("email").value;
         console.log(email);
+        params = `&email=${email}`;
+        console.log(params);
+        url += params;
 
+        console.log(url);
         xRequest.open("GET", url, true);
         xRequest.send();   
     }
