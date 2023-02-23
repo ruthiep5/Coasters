@@ -50,7 +50,7 @@
 
     <br><br><input type="text" id="email" placeholder="school email">
     <br><br><br>
-    <h2>Select which coaster(s), and how many you would like of each:</h2>
+    <h2>Which coaster(s), and how many:</h2>
    
     <div class="row">
         <div class="column">
@@ -156,6 +156,9 @@
         params = `&email=${email}`;
         console.log(params);
         url += params;
+
+        coasters = document.getElementsByClassName("coaster");
+        console.log(coasters)
 
         console.log(url);
         xRequest.open("GET", url, true);
