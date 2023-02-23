@@ -162,8 +162,11 @@
         for (let i = 0; i<coasters.length; i++){
             if (coasters[i].value != "" ) {
                 console.log(coasters[i].id, coasters[i].value)
+                params = `&coaster-${coasters[i].id}=${coasters[i].value}}`;
+                url += params;
             }
         }
+        
 
         console.log(url);
         xRequest.open("GET", url, true);
