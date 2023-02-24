@@ -13,7 +13,7 @@
         //save info to database file
         $dbFileName = 'coaster.json';
 
-        $file = fopen($dbFileName, 'r');
+        $file = fopen($dbFileName, 'a');
         fwrite($file, json_encode($_GET)."\n");
         fclose($file);
         //send the information back as confimration
