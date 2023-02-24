@@ -5,7 +5,7 @@
     print_r($_GET);
 
     // get information from the url parameters if one of the parameters in called 'name'
-    if (!empty($_GET['firstName'])){
+    //if (!empty($_GET['firstName'])){
         
         $_GET["time"] = time();
         $_GET['saved'] = True;
@@ -18,8 +18,8 @@
         fclose($file);
         //send the information back as confimration
         echo json_encode($_GET);
-    } else {
-        echo "DATA NOT SAVED";
+   // } else {
+     //   echo "DATA NOT SAVED";
         
-    }
+   // }
 ?>
