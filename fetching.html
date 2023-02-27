@@ -7,6 +7,7 @@
 </head>
 <body>
     hi
+    <p id="p1">Hola</p>
 </body>
 
 <script>
@@ -17,6 +18,7 @@ fetch('coaster.json')
 
 function myDisplay(y){
     console.log(y)
+    document.getElementById("p1").innerHTML = "New text!";
 }
 
 
