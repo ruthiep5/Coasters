@@ -121,57 +121,61 @@
         </div>
     </div>
 
-
-    <div id = "Coas">coaster</div>
+    
+    <div id = "Coas">coaster</div> 
     <br><br><input type="button" id="button" value="Submit Order">
-
     
    
     
 </body>
 <script>
+    // submit button
     submitBut = document.getElementById("button")
+    // click to record the order to the console
     submitBut.addEventListener("click", recordOrder)
 
+    // function for submit button
     function recordOrder(){
         url ='basic.php'
         xRequest = new XMLHttpRequest();
         xRequest.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 document.getElementById("Coas").innerHTML = this.responseText;
-            }
+            } // replaces coaster with info
         };
+        // get first name
         name = document.getElementById("firstName").value;
         console.log(name);
         params = `?firstName=${name}`;
-        console.log(params);
-        url += params;
-
+        console.log(params); 
+        url += params;  // add first name to url
+        // get last name
         lastName = document.getElementById("lastName").value;
         console.log(lastName);
         params = `&lastName=${lastName}`;
         console.log(params);
-        url += params;
-
+        url += params;  // add last name to url
+        // get email
         email = document.getElementById("email").value;
         console.log(email);
         params = `&email=${email}`;
         console.log(params);
-        url += params;
-
+        url += params;  // add email to url
+        // get coaster id and number of coasters
         coasters = document.getElementsByClassName("coaster");
         console.log(coasters)
         for (let i = 0; i<coasters.length; i++){
             if (coasters[i].value != "" ) {
-                console.log(coasters[i].id, coasters[i].value)
+                console.log(coasters[i].id, coasters[i].value)  // lists coaster id and value
                 params = `&coaster-${coasters[i].id}=${coasters[i].value}`;
-                url += params;
+                url += params;  // add to url
             }
         }
         
-        console.log(url);
-        xRequest.open("GET", url, true);
-        xRequest.send();   
+
+        console.log(url); // lists what was found in url
+        xRequest.open("GET", url, true); // gets url
+        xRequest.send();   // sends url info
     }
 
 </script>

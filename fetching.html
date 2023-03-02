@@ -6,20 +6,25 @@
     <title>Document</title>
 </head>
 <body>
-    hi
+    hola
     <p id="p1">Hola</p>
+
+    <div id = "name">Name</div> 
+
 </body>
 
 <script>
 
 fetch('coaster.json')
-.then(x => x.text())
+.then(x => x.text())        
 .then(y => myDisplay(y)); 
 
 function myDisplay(y){
     console.log(y)
     document.getElementById("p1").innerHTML = y;
+    document.getElementById("name").innerHTML = this.responseText;
 }
+
 
 
 </script>
