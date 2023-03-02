@@ -19,11 +19,11 @@ fetch('coaster.json')
 .then(y => myDisplay(y)); 
 
 function myDisplay(y){
-    console.log(y);
+    //console.log(y);
     document.getElementById("p1").innerHTML = y;
     lines = y.split("/n");
     console.log(lines[lines.length - 1]);
-    myArr = JSON.parse(lines[lines.length - 1]);
+    //myArr = JSON.parse(lines[lines.length - 1]);
     console.log(myArr);
 }
 
