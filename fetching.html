@@ -21,7 +21,8 @@ fetch('coaster.json')
 function myDisplay(y){
     console.log(y)
     document.getElementById("p1").innerHTML = y;
-    document.getElementById("p1").innerHTML = obj.name;
+    myArr = JSON.parse(y);
+    console.log(myArr)
 }
 
 
